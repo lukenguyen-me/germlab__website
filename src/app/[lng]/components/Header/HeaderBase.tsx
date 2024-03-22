@@ -61,7 +61,7 @@ const HeaderBase = (props: HeaderProps) => {
           className="md:hidden rounded p-2 text-3xl"
           onClick={toggleSidebar}
         >
-          <i className="bx bx-menu" />
+          <ion-icon name="menu-outline" />
         </button>
         <div className="flex items-center p-2 gap-4">
           <Image src="/images/logo.svg" alt="logo" width={30} height={30} />

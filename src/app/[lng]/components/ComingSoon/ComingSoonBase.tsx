@@ -1,7 +1,6 @@
 import { FontTektur } from "@/app/fonts";
 import { i18NextT } from "@/i18n";
 import classNames from "classnames";
-import { useTranslation } from "react-i18next";
 
 interface ComingSoonProps {
   t: i18NextT;
@@ -12,7 +11,7 @@ export default function CommingSoonBase(props: ComingSoonProps) {
   return (
     <div
       className={classNames(
-        "w-full h-full flex-1",
+        "w-full h-full flex-1 text-center",
         "flex flex-col items-center justify-center gap-4"
       )}
     >

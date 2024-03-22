@@ -2,6 +2,9 @@ import "@/app/globals.scss";
 import Script from "next/script";
 import classNames from "classnames";
 import { dir } from "i18next";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Header from "@/app/[lng]/components/Header/client";
 import Sidebar from "@/app/[lng]/components/Sidebar";
 import { fallbackLng, languages } from "@/i18n/settings";
@@ -40,10 +43,6 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#00FBF4" />
-        <link
-          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-          rel="stylesheet"
-        />
       </head>
       <body className={classNames("relative text-white")}>
         <Header />
@@ -57,6 +56,7 @@ export default function RootLayout({
           noModule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></Script>
+        <ToastContainer theme="dark" />
       </body>
     </html>
   );

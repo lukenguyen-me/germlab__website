@@ -8,6 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useSidebarStore } from "@/store/useSidebarStore";
 import { Menus } from "@/utils/navigation";
 import MenuItem from "./MenuItem";
+import { languages } from "@/i18n/settings";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -24,7 +25,7 @@ const Sidebar = () => {
     <div
       onClick={toggleSidebar}
       className={classNames(
-        "sidebar-container transition duration-300 opacity-0",
+        "sidebar-container transition duration-300 opacity-0 z-10",
         !sidebarOpen && "pointer-events-none",
         sidebarOpen && "opacity-100"
       )}
@@ -33,7 +34,7 @@ const Sidebar = () => {
         onClick={(e) => e.stopPropagation()}
         className={classNames(
           "sidebar flex flex-col",
-          "h-full bg-primary py-3 pointer-events-auto",
+          "h-full bg-black py-3 pointer-events-auto",
           " transition duration-300",
           !sidebarOpen && "-translate-x-full md:translate-x-0",
           sidebarOpen && "translate-x-0 z-10"
@@ -41,11 +42,16 @@ const Sidebar = () => {
       >
         <div className="flex items-center gap-2 p-5">
           <Image width={25} height={25} alt="" src="/images/logo.svg" />
-          <span className="text-white text-2xl font-medium">VESO</span>
+          <span className="text-white text-2xl font-medium">GERMLAB</span>
         </div>
         <div className="flex flex-1 flex-col p-2">
           {Menus.map((e) => {
-            const active = pathname === e.url;
+            const active =
+              e.url === "/"
+                ? languages.includes((pathname || "").replace("/", ""))
+                : pathname
+                ? pathname.includes(e.url)
+                : false;
             return (
               <MenuItem
                 key={e.label}
@@ -59,17 +65,7 @@ const Sidebar = () => {
             );
           })}
         </div>
-        <div className="p-5">
-          <MenuItem
-            text={
-              <div className="flex items-center gap-2">
-                <i className="bx bx-log-out" />
-                Logout
-              </div>
-            }
-            onClick={() => null}
-          />
-        </div>
+        <div className="p-5">© 2024 - Germlab</div>
       </div>
     </div>
   );
