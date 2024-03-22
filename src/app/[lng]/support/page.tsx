@@ -1,6 +1,11 @@
+import classNames from "classnames";
+import { Metadata } from "next";
 import { useTranslation } from "@/i18n";
 import FormSupport from "../components/FormSupport/client";
-import classNames from "classnames";
+
+export const metadata: Metadata = {
+  title: "Germlab - Support",
+};
 
 export default async function PageSupport({
   params: { lng },

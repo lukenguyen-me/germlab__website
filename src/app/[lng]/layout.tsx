@@ -26,8 +26,8 @@ export async function generateMetadata({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng);
   return {
-    title: "GermLab",
-    description: t("GermLab - Make things real"),
+    title: "Germlab",
+    description: t("Germlab - Make things real"),
   };
 }
 

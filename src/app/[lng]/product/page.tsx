@@ -1,5 +1,10 @@
-import CommingSoon from "@/app/[lng]/components/ComingSoon";
 import classNames from "classnames";
+import { Metadata } from "next";
+import CommingSoon from "@/app/[lng]/components/ComingSoon";
+
+export const metadata: Metadata = {
+  title: "Germlab - Product",
+};
 
 export default async function PageProduct({
   params: { lng },
