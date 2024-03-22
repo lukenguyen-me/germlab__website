@@ -1,7 +1,11 @@
 import CommingSoon from "@/app/[lng]/components/ComingSoon";
 import classNames from "classnames";
 
-export default function PageProduct({ lng }: { lng: string }) {
+export default async function PageProduct({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
   return (
     <main
       className={classNames(

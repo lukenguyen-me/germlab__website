@@ -2,7 +2,11 @@ import { useTranslation } from "@/i18n";
 import FormSupport from "../components/FormSupport/client";
 import classNames from "classnames";
 
-export default async function PageSupport({ lng }: { lng: string }) {
+export default async function PageSupport({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
   const { t } = await useTranslation(lng);
 
   return (
