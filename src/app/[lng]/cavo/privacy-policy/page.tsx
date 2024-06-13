@@ -11,8 +11,8 @@ export default async function PageCavoPrivacy() {
         <h1 className="text-center text-4xl">Privacy Policy</h1>
         <div className="flex flex-col gap-4">
           <p>
-            Germlab built the Flashnote app as a Free app. This SERVICE is
-            provided by Germlab at no cost and is intended for use as is.
+            Germlab built the Cavo app as a Free app. This SERVICE is provided
+            by Germlab at no cost and is intended for use as is.
           </p>
           <p>
             This page is used to inform visitors regarding my policies with the
@@ -28,7 +28,7 @@ export default async function PageCavoPrivacy() {
           </p>
           <p>
             The terms used in this Privacy Policy have the same meanings as in
-            our Terms and Conditions, which are accessible at Flashnote unless
+            our Terms and Conditions, which are accessible at Cavo unless
             otherwise defined in this Privacy Policy.
           </p>
         </div>

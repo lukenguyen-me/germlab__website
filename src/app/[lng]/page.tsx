@@ -1,11 +1,16 @@
 import classNames from "classnames";
 import { FontTektur } from "../fonts";
 import styles from "./styles.module.scss";
+import Image from "next/image";
+import Button from "@/components/Button";
+import SectionFeebcollect from "./SectionFeebcollect";
+import SectionVeso from "./SectionVeso";
+import SectionFlashnote from "./SectionFlashnote";
 
 export default function PageHome() {
   return (
     <main>
-      <div className={classNames("relative", styles.intro)}>
+      <section className={classNames("relative", styles.intro)}>
         <div className={styles.mask} />
         <div
           className={classNames(
@@ -34,7 +39,22 @@ export default function PageHome() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section
+        className={classNames("container mx-auto px-8 md:px-0 py-20 md:py-40")}
+      >
+        <SectionFeebcollect />
+      </section>
+      <section
+        className={classNames("container mx-auto px-8 md:px-0 py-20 md:py-40")}
+      >
+        <SectionVeso />
+      </section>
+      <section
+        className={classNames("container mx-auto px-8 md:px-0 py-20 md:py-40")}
+      >
+        <SectionFlashnote />
+      </section>
     </main>
   );
 }
