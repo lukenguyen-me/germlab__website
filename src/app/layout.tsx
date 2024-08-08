@@ -47,6 +47,11 @@ export default function RootLayout({
           noModule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></Script>
+        <Script
+          defer
+          data-domain="germlab.dev"
+          src="https://plausible.io/js/script.js"
+        />
         <ToastContainer theme="dark" />
       </body>
     </html>
