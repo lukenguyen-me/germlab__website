@@ -1,6 +1,6 @@
 "use client";
 
-import { FontTektur } from "@/app/fonts";
+import { FontTektur } from "@/fonts";
 import { i18NextT } from "@/i18n";
 import { languages } from "@/i18n/settings";
 import { useSidebarStore } from "@/store/useSidebarStore";
@@ -11,6 +11,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef } from "react";
 import { useShallow } from "zustand/react/shallow";
+import AppLogo from "../AppLogo";
 
 export interface HeaderProps {
   t: i18NextT;
@@ -63,23 +64,7 @@ const HeaderBase = (props: HeaderProps) => {
         >
           <ion-icon name="menu-outline" />
         </button>
-        <div className="flex items-center p-2 gap-4">
-          <Image src="/images/logo.svg" alt="logo" width={30} height={30} />
-          <div
-            className={classNames(
-              "flex items-center font-bold gap-1",
-              FontTektur.className
-            )}
-          >
-            <span>G</span>
-            <span className="text-primary">E</span>
-            <span>R</span>
-            <span className="text-primary">M</span>
-            <span>L</span>
-            <span className="text-primary">A</span>
-            <span>B</span>
-          </div>
-        </div>
+        <AppLogo className="p-2" />
         <div className="hidden md:flex items-center ml-10 gap-10">
           {Menus.map((e) => {
             const active =

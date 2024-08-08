@@ -4,12 +4,11 @@ import axios from "axios";
 import classNames from "classnames";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-
-import Image from "next/image";
 import { useState } from "react";
-import { i18NextT } from "@/i18n";
-import Spinner from "@/components/Spinner";
 import { toast } from "react-toastify";
+
+import { i18NextT } from "@/i18n";
+import Spinner from "@/components/common/Spinner";
 
 const animatedComponents = makeAnimated();
 

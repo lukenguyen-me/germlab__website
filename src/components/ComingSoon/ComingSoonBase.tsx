@@ -1,4 +1,4 @@
-import { FontTektur } from "@/app/fonts";
+import { FontTektur } from "@/fonts";
 import { i18NextT } from "@/i18n";
 import classNames from "classnames";
 

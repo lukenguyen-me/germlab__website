@@ -9,6 +9,7 @@ import { useSidebarStore } from "@/store/useSidebarStore";
 import { Menus } from "@/utils/navigation";
 import MenuItem from "./MenuItem";
 import { languages } from "@/i18n/settings";
+import AppLogo from "../AppLogo";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -34,16 +35,13 @@ const Sidebar = () => {
         onClick={(e) => e.stopPropagation()}
         className={classNames(
           "sidebar flex flex-col",
-          "h-full bg-black py-3 pointer-events-auto",
+          "h-full bg-black py-3",
           " transition duration-300",
           !sidebarOpen && "-translate-x-full md:translate-x-0",
-          sidebarOpen && "translate-x-0 z-10"
+          sidebarOpen && "translate-x-0 z-10 pointer-events-auto"
         )}
       >
-        <div className="flex items-center gap-2 p-5">
-          <Image width={25} height={25} alt="" src="/images/logo.svg" />
-          <span className="text-white text-2xl font-medium">GERMLAB</span>
-        </div>
+        <AppLogo className="p-5" />
         <div className="flex flex-1 flex-col p-2">
           {Menus.map((e) => {
             const active =
