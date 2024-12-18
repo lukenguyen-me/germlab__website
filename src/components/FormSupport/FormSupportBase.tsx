@@ -1,14 +1,13 @@
 "use client";
 
+import Spinner from "@/components/common/Spinner";
+import { i18NextT } from "@/i18n";
 import axios from "axios";
 import classNames from "classnames";
+import { useState } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import { useState } from "react";
 import { toast } from "react-toastify";
-
-import { i18NextT } from "@/i18n";
-import Spinner from "@/components/common/Spinner";
 
 const animatedComponents = makeAnimated();
 
@@ -27,6 +26,11 @@ const Applications = [
     name: "Cavo",
     image:
       "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_cavo.png",
+  },
+  {
+    name: "GymDict",
+    image:
+      "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_gymdict.png",
   },
 ];
 
@@ -110,8 +114,8 @@ export default function PageSupport(props: FormSupportProps) {
               backgroundColor: isSelected
                 ? "#00FBF4"
                 : isFocused
-                ? "black"
-                : "#333333",
+                  ? "black"
+                  : "#333333",
             }),
           }}
           components={animatedComponents}
@@ -121,7 +125,7 @@ export default function PageSupport(props: FormSupportProps) {
         />
       </div>
       <input
-        className="text-lg p-4"
+        className="p-4 text-lg"
         placeholder={t("What is it about?")}
         value={subject}
         onChange={(e) => setSubject(e.target.value)}
@@ -137,9 +141,9 @@ export default function PageSupport(props: FormSupportProps) {
         onClick={onSubmit}
         className={classNames(
           "flex items-center justify-center gap-4",
-          "rounded p-4 border transition-all",
+          "rounded border p-4 transition-all",
           "border-primary text-primary",
-          "hover:bg-primary hover:text-black hover:font-bold"
+          "hover:bg-primary hover:font-bold hover:text-black",
         )}
       >
         {submitting && <Spinner className="w-6" />}

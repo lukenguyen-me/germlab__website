@@ -1,24 +1,20 @@
+import CommingSoon from "@/components/ComingSoon";
 import classNames from "classnames";
 import { Metadata } from "next";
-import CommingSoon from "@/components/ComingSoon";
 
 export const metadata: Metadata = {
   title: "Germlab - Product",
 };
 
-export default async function PageProduct({
-  params: { lng },
-}: {
-  params: { lng: string };
-}) {
+export default async function PageProduct() {
   return (
     <main
       className={classNames(
         "flex min-h-screen flex-col items-center justify-between",
-        "padding-header bg-black p-8"
+        "padding-header bg-black p-8",
       )}
     >
-      <CommingSoon lng={lng} />
+      <CommingSoon lng={"en"} />
     </main>
   );
 }
