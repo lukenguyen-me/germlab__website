@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: "Germlab - GymDict Privacy Policy",
 };
 
+const EFFECTIVE_DATE = "2024-12-18";
+
 export default async function PageGymDictPrivacy() {
   return (
     <main className="flex min-h-screen">
@@ -160,13 +162,13 @@ export default async function PageGymDictPrivacy() {
           </p>
         </div>
         <div>
-          <i>This policy is effective as of 2024-03-22</i>
+          <i>This policy is effective as of {EFFECTIVE_DATE}</i>
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-semibold">Contact Us</h2>
           <p>
             If you have any questions or suggestions about my Privacy Policy, do
-            not hesitate to contact me at =
+            not hesitate to contact me at{" "}
             <a
               className="text-accent underline"
               href="https://www.germlab.dev/support"

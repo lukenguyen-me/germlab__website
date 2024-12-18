@@ -4,10 +4,12 @@ export const metadata: Metadata = {
   title: "Germlab - Cavo Privacy Policy",
 };
 
+const EFFECTIVE_DATE = "2024-03-2";
+
 export default async function PageCavoPrivacy() {
   return (
-    <main className="min-h-screen flex">
-      <div className="container w-screen min-h-screen flex flex-col mx-auto py-10 md:py-20 gap-12 px-4 md:px-0">
+    <main className="flex min-h-screen">
+      <div className="container mx-auto flex min-h-screen w-screen flex-col gap-12 px-4 py-10 md:px-0 md:py-20">
         <h1 className="text-center text-4xl">Privacy Policy</h1>
         <div className="flex flex-col gap-4">
           <p>
@@ -52,7 +54,7 @@ export default async function PageCavoPrivacy() {
               Link to the privacy policy of third-party service providers used
               by the app:
             </p>
-            <ul className="li list-disc pl-8 py-4">
+            <ul className="li list-disc py-4 pl-8">
               <li>
                 <a
                   href="https://www.google.com/policies/privacy/"
@@ -160,13 +162,13 @@ export default async function PageCavoPrivacy() {
           </p>
         </div>
         <div>
-          <i>This policy is effective as of 2024-03-22</i>
+          <i>This policy is effective as of {EFFECTIVE_DATE}</i>
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-semibold">Contact Us</h2>
           <p>
             If you have any questions or suggestions about my Privacy Policy, do
-            not hesitate to contact me at =
+            not hesitate to contact me at{" "}
             <a
               className="text-accent underline"
               href="https://www.germlab.dev/support"
