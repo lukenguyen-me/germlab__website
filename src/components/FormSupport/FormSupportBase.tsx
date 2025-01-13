@@ -13,24 +13,14 @@ const animatedComponents = makeAnimated();
 
 const Applications = [
   {
-    name: "Flashnote",
+    name: "Stage Shot",
     image:
-      "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_flashnote.png",
+      "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_stageshot.png",
   },
   {
     name: "Veso",
     image:
       "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_veso.png",
-  },
-  {
-    name: "Cavo",
-    image:
-      "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_cavo.png",
-  },
-  {
-    name: "GymDict",
-    image:
-      "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_gymdict.png",
   },
 ];
 
