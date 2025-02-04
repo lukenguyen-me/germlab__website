@@ -13,6 +13,11 @@ const animatedComponents = makeAnimated();
 
 const Applications = [
   {
+    name: "Ho Chi Minh Metro",
+    image:
+      "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_hcmmetro.png",
+  },
+  {
     name: "Stage Shot",
     image:
       "https://germlab.s3.ap-southeast-1.amazonaws.com/public/logo_stageshot.png",
